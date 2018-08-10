@@ -1,5 +1,7 @@
 # PhxReact
 
+Repo for the tutorial at: https://medium.com/@yan_shiyason/hooking-up-react-to-phoenix-the-easy-way-19bd7fff4fff
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
