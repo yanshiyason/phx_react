@@ -39,6 +39,7 @@ defmodule PhxReactWeb do
 
       import PhxReactWeb.Router.Helpers
       import PhxReactWeb.ErrorHelpers
+      import PhxReactWeb.ViewHelpers
       import PhxReactWeb.Gettext
     end
   end

@@ -1,3 +1,8 @@
+<%
+  {:ok, manifest} = read_json_file("priv/static/asset-manifest.json")
+  main_js  = "/" <> manifest["main.js"]
+  main_css = "/" <> manifest["main.css"]
+%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,28 +13,13 @@
     <meta name="author" content="">
 
     <title>Hello PhxReact!</title>
-    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link rel="manifest" href="<%= static_path(@conn, "/static/asset-manifest.json") %>">
+    <link rel="stylesheet" href="<%= static_path(@conn, main_css) %>">
   </head>
 
   <body>
-    <div class="container">
-      <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
-          </ul>
-        </nav>
-        <span class="logo"></span>
-      </header>
-
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-
-      <main role="main">
-        <%= render @view_module, @view_template, assigns %>
-      </main>
-
-    </div> <!-- /container -->
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script src="<%= static_path(@conn, main_js) %>"></script>
   </body>
 </html>

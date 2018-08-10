@@ -1,0 +1,13 @@
+#!/bin/bash bash
+
+# cd into script directory
+cd "$(dirname "$0")"
+
+# Copy JS bundle to noonde static assets dir
+cp -r ../build/static ../../../priv/static/
+
+cp ../build/*.json  \
+    ../build/*.ico  \
+    ../build/*.json \
+    ../build/*.js   \
+    ../../../priv/static/

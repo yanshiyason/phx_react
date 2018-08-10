@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# cd into script directory
+cd "$(dirname "$0")"
+
+# Build frontend app
+cd ../my-app && yarn build

@@ -9,7 +9,7 @@ defmodule PhxReactWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/", from: :phx_react, gzip: false,
-    only: ~w(css fonts images js favicon.ico robots.txt)
+    only: ~w(static css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
